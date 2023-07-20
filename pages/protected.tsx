@@ -27,14 +27,22 @@ export default function ProtectedPage() {
 
     console.log(e)
 
-    if(e === '') {
+    
+    let prevSearch = localStorage.getItem('search-term')
+    
+    if (prevSearch === e) {
+      localStorage.removeItem('search-term');
       fetchData()
     }
-
+    
+    
+    if(e === '' ) {
+      fetchData()
+    }
+    
     const res = data.filter(name => name.competition.includes(e))
-
-    // const res = data.filter((item) => item.competition.toLowerCase() == e.toLowerCase())
     setData(res)
+    localStorage.setItem('search-term', e)
   }
 
   // Fetch content from protected route
@@ -55,7 +63,7 @@ export default function ProtectedPage() {
   // If session exists, display content
   return (
     <Layout>
-      <SearchBar onSubmit={(e) => handleSearch(e)} />
+      <SearchBar onSubmit={(e) => handleSearch(e)} inputProps={{ "aria-label": "competition-search" }}/>
       <h1>Protected Odds Page</h1>
         <strong>{content ?? "\u00a0"}</strong>
       <Table data={data} />

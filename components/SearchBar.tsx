@@ -32,7 +32,7 @@ const Searchbar = (props: Props) => {
       {/* Input base contains the fewest styles possible so it's perfect for creating custom components like these */}
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search..."
+        placeholder="Search Competitions..."
         inputProps={{ "aria-label": "search" }}
         value={searchTerm}
         onChange={(e) => {
