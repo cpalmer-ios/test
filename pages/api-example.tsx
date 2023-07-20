@@ -9,11 +9,11 @@ export default function ApiExamplePage() {
         <em>You must be signed in to see responses.</em>
       </p>
       <h2>Session</h2>
-      <p>/api/examples/session</p>
-      <iframe src="/api/examples/session" />
+      <p>/api/odds/session</p>
+      <iframe src="/api/odds/session" />
       <h2>JSON Web Token</h2>
-      <p>/api/examples/jwt</p>
-      <iframe src="/api/examples/jwt" />
+      <p>/api/odds/jwt</p>
+      <iframe src="/api/odds/jwt" />
     </Layout>
   )
 }

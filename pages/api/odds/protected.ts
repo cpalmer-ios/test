@@ -1,6 +1,7 @@
 // This is an example of to protect an API route
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "../auth/[...nextauth]"
+import fixtures from '../data/fixtures.json'
 
 import type { NextApiRequest, NextApiResponse } from "next"
 
@@ -14,6 +15,7 @@ export default async function handler(
     return res.send({
       content:
         "This is protected content. You can access this content because you are signed in.",
+        data: fixtures,
     })
   }
 
