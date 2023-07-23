@@ -1,40 +1,45 @@
-
 .table {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 .tableTitle {
-    line-height: 1rem;
-    padding: 0;
-    margin-top: 1rem;
-    color: grey;
-    margin-bottom: 0;
+  line-height: 1rem;
+  padding: 0;
+  margin-top: 1rem;
+  color: grey;
+  margin-bottom: 0;
 }
 .tableContainer {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 1rem;
-    padding: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.5s;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
 }
 
 .tableContainer:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tableWrapper {
+  height: 10rem;
+  overflow: scroll;
+  margin: 1rem;
 }
 
 .tbody {
-    display: grid;
+  display: grid;
 }
 
 .td {
-    width: auto;
-    height: 3rem;
-    display: flex;
+  width: auto;
+  height: 3rem;
+  display: flex;
 }
 
 .tableButton {
-    padding: 5px 16px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.5s;
+  padding: 5px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
 }

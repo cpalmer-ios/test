@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import AccessDenied from "../components/access-denied"
 import Table from "../components/Table"
 import SearchBar from "../components/SearchBar"
-import { useRouter } from "next/router"
 
 export default function ProtectedPage() {
   const { data: session } = useSession()
@@ -23,18 +22,7 @@ export default function ProtectedPage() {
   }
 
 
-  const handleSearch = (e: string) => {
-
-    console.log(e)
-
-    
-    let prevSearch = localStorage.getItem('search-term')
-    
-    if (prevSearch === e) {
-      localStorage.removeItem('search-term');
-      fetchData()
-    }
-    
+  const handleSearch = (e: string) => {    
     
     if(e === '' ) {
       fetchData()
@@ -42,7 +30,6 @@ export default function ProtectedPage() {
     
     const res = data.filter(name => name.competition.includes(e))
     setData(res)
-    localStorage.setItem('search-term', e)
   }
 
   // Fetch content from protected route
